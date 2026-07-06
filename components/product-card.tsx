@@ -52,10 +52,11 @@ export function ProductCard({ product }: { product: Product }) {
 
   <Link
   href={`/undangan/${product.code}`}
+  scroll={true}
   className="inline-flex w-full items-center justify-center rounded-lg border border-emerald-600 py-2 font-semibold text-emerald-600 transition hover:bg-emerald-50"
-  >
+>
   Lihat Detail
-  </Link>
+</Link>
 
   <a
     href={buildWhatsAppLink(product)}

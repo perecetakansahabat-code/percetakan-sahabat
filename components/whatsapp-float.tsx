@@ -4,7 +4,7 @@ import { WHATSAPP_NUMBER } from "@/lib/products"
 export function WhatsAppFloat() {
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Halo Inviee.id, saya ingin bertanya tentang undangan cetak.")}`}
+      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Halo Ka, saya ingin bertanya tentang undangan cetak.")}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat via WhatsApp"
