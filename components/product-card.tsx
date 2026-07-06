@@ -21,30 +21,30 @@ export function ProductCard({ product }: { product: Product }) {
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-4">
+      <div className="flex flex-1 flex-col p-3 sm:p-4">
         <div className="mb-1 flex items-center justify-between gap-2">
-          <span className="rounded-md bg-secondary px-2 py-0.5 text-xs font-semibold text-primary">
+          <span className="rounded-md bg-secondary px-1.5 py-0.5 text-[10px] sm:text-xs font-semibold text-primary">
             {product.code}
           </span>
-          <span className="text-xs text-muted-foreground">{product.category}</span>
+          <span className="text-[10px] sm:text-xs text-muted-foreground">{product.category}</span>
         </div>
 
-        <h3 className="text-pretty text-sm font-medium leading-snug text-foreground">{product.name}</h3>
+        <h3 className="line-clamp-2 min-h-[2.8rem] text-sm sm:text-base font-semibold leading-snug text-foreground">{product.name}</h3>
 
-        <dl className="mt-4 space-y-2 rounded-xl bg-secondary/60 p-3">
-          <div className="flex items-center justify-between">
+        <dl className="mt-3 space-y-2 rounded-xl bg-secondary/60 p-2.5 sm:p-3">
+          <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
             <dt className="flex items-center gap-1.5 text-xs text-muted-foreground">
               <Square className="size-3.5" />
               Tanpa Laminasi
             </dt>
             <dd className="text-sm font-semibold text-foreground">{formatRupiah(product.priceBasic)}</dd>
           </div>
-          <div className="flex items-center justify-between border-t border-border pt-2">
+          <div className="flex flex-col items-start gap-1 border-t border-border pt-2 sm:flex-row sm:items-center sm:justify-between">
             <dt className="flex items-center gap-1.5 text-xs text-muted-foreground">
-              <Layers className="size-3.5 text-accent" />
+              <Layers className="size-3.5 text-green-600" />
               Dengan Laminasi
             </dt>
-            <dd className="text-sm font-bold text-accent">{formatRupiah(product.priceLaminated)}</dd>
+            <dd className="text-sm font-bold text-green-400">{formatRupiah(product.priceLaminated)}</dd>
           </div>
         </dl>
 
